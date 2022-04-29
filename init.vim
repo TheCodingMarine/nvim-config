@@ -1,4 +1,4 @@
-""" Optixal's Neovim Init.vim
+""" TheCodingMarine's Neovim Init.vim
 
 """ Vim-Plug
 call plug#begin()
@@ -13,7 +13,6 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-journal'
-Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'nightsense/forgotten'
 Plug 'zaki/zazen'
 Plug 'https://github.com/morhetz/gruvbox'
@@ -26,6 +25,8 @@ Plug 'https://github.com/tomasr/molokai'
 Plug 'https://github.com/sonph/onehalf'
 Plug 'https://github.com/rakr/vim-one'
 Plug 'https://github.com/drewtempelmeyer/palenight.vim'
+Plug 'https://github.com/vim-scripts/loremipsum'
+
 " Aethetics - Additional
 Plug 'nightsense/nemo'
 Plug 'yuttie/hydrangea-vim'
@@ -101,6 +102,7 @@ endfunction
 
 " Main Coloring Configurations
 syntax on
+colorscheme sonokai
 
 " Enable True Color Support (ensure you're using a 256-color enabled $TERM, e.g. xterm-256color)
 set termguicolors
