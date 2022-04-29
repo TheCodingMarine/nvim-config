@@ -17,7 +17,15 @@ Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'nightsense/forgotten'
 Plug 'zaki/zazen'
 Plug 'https://github.com/morhetz/gruvbox'
-
+Plug 'https://github.com/sainnhe/sonokai'
+Plug 'https://github.com/sainnhe/everforest'
+Plug 'https://github.com/ajmwagar/vim-deus'
+Plug 'https://github.com/joshdick/onedark.vim'
+Plug 'https://github.com/liuchengxu/space-vim-dark'
+Plug 'https://github.com/tomasr/molokai'
+Plug 'https://github.com/sonph/onehalf'
+Plug 'https://github.com/rakr/vim-one'
+Plug 'https://github.com/drewtempelmeyer/palenight.vim'
 " Aethetics - Additional
 Plug 'nightsense/nemo'
 Plug 'yuttie/hydrangea-vim'
@@ -61,6 +69,7 @@ Plug 'dansomething/vim-hackernews'
 call plug#end()
 
 """ Main Configurations
+syntax on
 filetype plugin indent on
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
 set incsearch ignorecase smartcase hlsearch
@@ -92,7 +101,6 @@ endfunction
 
 " Main Coloring Configurations
 syntax on
-color gruvbox
 
 " Enable True Color Support (ensure you're using a 256-color enabled $TERM, e.g. xterm-256color)
 set termguicolors
@@ -360,4 +368,3 @@ autocmd FileType python nmap <leader>x :0,$!~/.config/nvim/env/bin/python -m yap
 nmap <silent> <leader><leader> :noh<CR>
 nmap <Tab> :bnext<CR>
 nmap <S-Tab> :bprevious<CR>
-
