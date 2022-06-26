@@ -7,7 +7,6 @@ call plug#begin()
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'bryanmylee/vim-colorscheme-icons'
 Plug 'mhinz/vim-startify'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
@@ -63,6 +62,8 @@ Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'wellle/context.vim'
 Plug 'https://github.com/sansyrox/vim-python-virtualenv'
 Plug 'https://github.com/nvie/vim-flake8'
+Plug 'luisdavim/pretty-folds'
+Plug 'mattn/emmet-vim'
 
 " Entertainment
 Plug 'dansomething/vim-hackernews'
@@ -72,33 +73,36 @@ call plug#end()
 """ Main Configurations
 syntax on
 filetype plugin indent on
-set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
-set incsearch ignorecase smartcase hlsearch
+set tabstop=4 
+set softtabstop=4 
+set shiftwidth=4 
+set expandtab 
+set smarttab 
+set autoindent
+set incsearch 
+set ignorecase 
+set smartcase 
+set hlsearch
 set wildmode=longest,list,full wildmenu
-set ruler laststatus=2 showcmd showmode
+set ruler 
+set laststatus=2 
+set showcmd 
+set showmode
 set list listchars=trail:»,tab:»-
 set fillchars+=vert:\ 
-set wrap breakindent
+set wrap 
+set breakindent
 set encoding=utf-8
-set textwidth=0
+set textwidth=79
 set hidden
 set number
 set title
 set colorcolumn=80
-""" Coloring
-
-" Functions and autocmds to run whenever changing colorschemes
-function! TransparentBackground()
-    highlight Normal guibg=NONE ctermbg=NONE
-    highlight LineNr guibg=NONE ctermbg=NONE
-    set fillchars+=vert:\│
-    highlight VertSplit gui=NONE guibg=NONE guifg=#444444 cterm=NONE ctermbg=NONE ctermfg=gray
-endfunction
-
-function! DraculaPMenu()
-    highlight Pmenu guibg=#363948
-    highlight PmenuSbar guibg=#363948
-endfunction
+set foldmethod=manual
+set nofoldenable
+set foldlevel=99
+set fillchars=fold:\ "The backslash escapes a space
+set foldtext=manual
 
 " Main Coloring Configurations
 syntax on
